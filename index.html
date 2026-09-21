@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highers Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <label class="theme">
+            <span class="theme__toggle-wrap">
+                <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark" aria-label="Dark mode">
+                <span class="theme__fill"></span>
+                <span class="theme__icon">
+                    <span class="theme__icon-part"></span><span class="theme__icon-part"></span><span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span><span class="theme__icon-part"></span><span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span><span class="theme__icon-part"></span><span class="theme__icon-part"></span>
+                </span>
+            </span>
+        </label>
+
+        <h1 class="title">Highers Quiz</h1>
+        <p>Flashcards and practice questions.</p>
+
+        <select id="subject-select">
+            <option value="">Select a subject</option>
+            <option value="maths">Maths</option>
+            <option value="physics">Physics</option>
+            <option value="biology">Biology</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="engineering">Engineering Science</option>
+            <option value="modernStudies">Modern Studies</option>
+            <option value="english">English</option>
+            <option value="computerScience">Computer Science</option>
+        </select>
+
+        <select id="topic-select" class="topic-select" data-subject="" disabled><option value="">Select a topic</option></select>
+        <select class="topic-select hidden" data-subject="maths">
+            <option value="">Select a topic</option>
+            <option value="Differentiation">Differentiation</option>
+        </select>
+        <select class="topic-select hidden" data-subject="physics">
+            <option value="">Select a topic</option>
+            <option value="Forces &amp; Motion">Forces &amp; Motion</option>
+        </select>
+        <select class="topic-select hidden" data-subject="biology">
+            <option value="">Select a topic</option>
+            <option value="Cell Biology">Cell Biology</option>
+        </select>
+        <select class="topic-select hidden" data-subject="chemistry">
+            <option value="">Select a topic</option>
+            <option value="Bonding">Bonding</option>
+        </select>
+        <select class="topic-select hidden" data-subject="engineering">
+            <option value="">Select a topic</option>
+            <option value="Mechanisms">Mechanisms</option>
+        </select>
+        <select class="topic-select hidden" data-subject="modernStudies">
+            <option value="">Select a topic</option>
+            <option value="Democracy in Scotland/UK">Democracy in Scotland/UK</option>
+        </select>
+        <select class="topic-select hidden" data-subject="english">
+            <option value="">Select a topic</option>
+            <option value="Critical Essay Terms">Critical Essay Terms</option>
+        </select>
+        <select class="topic-select hidden" data-subject="computerScience">
+            <option value="">Select a topic</option>
+            <option value="Data Structures">Data Structures</option>
+        </select>
+
+        <div>
+            <button class="button mode-button active" data-mode="flashcards"><span>Flashcards</span></button>
+            <button class="button mode-button" data-mode="practice"><span>Practice</span></button>
+        </div>
+
+        <p id="empty-state">Pick a subject and topic to get started!</p>
+
+        <div id="flashcard-view" class="container hidden">
+            <div id="card-counter"></div>
+            <div class="flip-card" id="flashcard">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"><p class="title" id="card-front"></p></div>
+                    <div class="flip-card-back"><p class="title" id="card-back"></p></div>
+                </div>
+            </div>
+            <div>
+                <button id="prev-card" class="button"><span>Previous</span></button>
+                <button id="next-card" class="button"><span>Next</span></button>
+            </div>
+        </div>
+
+        <div id="quiz-view" class="container hidden">
+            <div class="radio-input">
+                <div class="info">
+                    <span class="question" id="quiz-question"></span>
+                    <span class="steps" id="quiz-counter"></span>
+                </div>
+                <div id="quiz-options"></div>
+                <div class="result success">Correct!</div>
+                <div class="result error">Not quite.</div>
+            </div>
+            <button id="next-question" class="button"><span>Next Question</span></button>
+            <div id="quiz-score"></div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
