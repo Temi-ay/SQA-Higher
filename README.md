@@ -2,7 +2,7 @@
 A website where you can pick a subject and topic, then study with flashcards or test yourself with practice questions.
 
 ## ScreenShot
-![Highers Quiz Image](Screenshot_22-9-2026_13459_temi-ay.github.io.jpeg)
+![Highers Quiz Image](Screenshot_1-10-2026_232043_temi-ay.github.io.jpeg)
 
 ## Try It
 [Demo Link](https://temi-ay.github.io/SQA-Higher/)
